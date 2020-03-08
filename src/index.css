@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.bluebar{
+  background-color: rgb(29, 29, 122);
+}
+
+.links{
+  margin: auto;
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 65px;
+}
+
+.item{
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.text{
+  text-align: center;
+}
+
+.table{
+  width: 70%;
+  margin: 0 auto;
+}
