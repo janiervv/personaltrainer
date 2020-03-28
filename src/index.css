@@ -15,6 +15,19 @@
   height: 65px;
 }
 
+.info{
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.aligntoleft{
+  justify-content: flex-end;
+  height: 50px;
+}
+
 .item{
   color: whitesmoke;
   text-decoration: none;
