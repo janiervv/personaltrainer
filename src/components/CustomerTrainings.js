@@ -8,16 +8,15 @@ import Addtraining from './AddTraining';
 
 export default function Customertrainings(props) {
 
-
     useEffect(() => getData(), []);
 
-    {/*Otetaan asiakkaan ID vastaan propsina, ja syötetään se alempana fetch-lauseeseen */}
+    //*Otetaan asiakkaan ID vastaan propsina, ja syötetään se alempana fetch-lauseeseen
 
     const [trainings, setTrainings] = useState([]);
     const [customer, setCustomer] = useState([]);
+    var columns = [];
     var id = props.id
     var url = `https://customerrest.herokuapp.com/api/customers/${id}`;
-    console.log(id)
 
     const getData = () => {
         fetch(`https://customerrest.herokuapp.com/api/customers/${id}/trainings`)
@@ -29,9 +28,7 @@ export default function Customertrainings(props) {
         .then(response => setCustomer(response));
     };
 
- 
-
-    const columns = [
+    columns = [
         {
             Header: 'Time',
             id: 'date',

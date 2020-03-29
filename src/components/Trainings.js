@@ -55,7 +55,7 @@ export default function TrainingsList() {
         },
 
         {
-            Header: 'Customer',
+            Header: '',
             accessor: 'customer.lastname',
             width: 100
         },
@@ -75,8 +75,12 @@ export default function TrainingsList() {
   return (
     <div className="table">
 
-            <ReactTable filterable={true} data={trainings} columns={columns}/>
-
+            <ReactTable 
+            filterable={true} 
+            data={trainings} 
+            columns={columns}
+            defaultPageSize = {10}  
+            />
     </div>
   );
 }

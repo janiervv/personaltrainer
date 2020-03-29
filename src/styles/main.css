@@ -23,9 +23,10 @@
   height: 120px;
 }
 
-.aligntoleft{
+.aligntoright{
+  display: flex;
   justify-content: flex-end;
-  height: 50px;
+  margin-right: 25px;
 }
 
 .item{

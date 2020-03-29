@@ -56,14 +56,6 @@ export default function Customerlist() {
 
     const columns = [
 
-        {
-            accessor: 'links[0].href',
-            //Alla luodaan URL, joka ohjaa sivulle customertainings. URLiin liitetään asiakkaan ID (ID haetaan accessorina olevasta href-linkistä)
-            Cell: row => <Button variant="outlined" onClick={event =>  window.location.href='customertrainings/' + (row.value.substring(row.value.lastIndexOf('/') + 1))}>See trainings</Button>,
-            sortable: false,
-            filterable: false,
-            width: 220
-        },
 
         {
             Header: 'Name',
@@ -81,6 +73,15 @@ export default function Customerlist() {
             Header: 'Email',
             accessor: 'email',
             width: 200
+        },
+
+        {
+            accessor: 'links[0].href',
+            //Alla luodaan URL, joka ohjaa sivulle customertainings. URLiin liitetään asiakkaan ID (ID haetaan accessorina olevasta href-linkistä)
+            Cell: row => <Button variant="outlined" onClick={event =>  window.location.href='customertrainings/' + (row.value.substring(row.value.lastIndexOf('/') + 1))}>See trainings</Button>,
+            sortable: false,
+            filterable: false,
+            width: 220
         },
 
         {
@@ -104,8 +105,16 @@ export default function Customerlist() {
     
   return (
     <div className="table">
-            <div><AddCustomer addCustomer={addCustomer}/></div>
-            <ReactTable filterable={true} data={customers} columns={columns}/>
+            <p></p>
+            <div className="aligntoright"><AddCustomer 
+            addCustomer={addCustomer}
+            /></div>
+            <p></p>
+            <ReactTable 
+            filterable={true} 
+            defaultPageSize = {10}  
+            data={customers} 
+            columns={columns}/>
     </div>
   );
 }

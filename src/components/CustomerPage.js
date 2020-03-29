@@ -6,8 +6,8 @@ import {useParams} from "react-router"
 
 export default function Customerpage(){
 
-    {/*Customerpage vastaanottaa asiakkaan ID.n URLista, ja tekee siitä muuttujan "id" */}
-
+    //Customerpage vastaanottaa asiakkaan ID.n URLista, ja tekee siitä muuttujan "id"
+    
     const {id} = useParams();
 
     return(

@@ -1,9 +1,9 @@
 import React from 'react';
 import Customerlist from './Customers'
-import Homepage from './Homepage'
 import TrainingsList from './Trainings'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Customerpage from './CustomerPage';
+import Trainingcalendar from './Calendar';
 
 export default function Navigation() {
 
@@ -15,7 +15,7 @@ export default function Navigation() {
       <div>
         <div className="bluebar">
         <nav className="links">
-              <Link className="item" to="/">Home </Link>
+              <Link className="item" to="/calendar">Calendar</Link>
               <Link className="item" to="/customers">Customers</Link>
               <Link className="item" to="/trainings">Trainings</Link>
         </nav>
@@ -36,8 +36,12 @@ export default function Navigation() {
             <TrainingsList />
           </Route>
 
-          <Route path="/">
-            <Homepage />
+          <Route exact path="/">
+            <Customerlist />
+          </Route>
+
+          <Route path="/calendar">
+            <Trainingcalendar />
           </Route>
 
         </Switch>

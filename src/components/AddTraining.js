@@ -53,9 +53,9 @@ export default function Addtraining(props){
           "customer" :  props.url
       })
   })
-      .catch(err => console.error(err));
-      props.getData();
-      handleClose();
+      .then(res => props.getData())
+      .catch(err => console.error(err))
+      handleClose()
   }
 
   const handleDateChange = date => {
